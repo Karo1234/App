@@ -1,0 +1,82 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> TVI GUSHAKUM</title>
+<script type="text/javascript"   src="jquery.min.js"></script>
+</head>
+<body>
+ <center>
+<div class="form"> 
+    <label for="guessField"></label> 
+    <input type = "text" id = "guessField" class = "guessField"> 
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess"> 
+</div> <br>
+<div id ="demo"></div>
+ <center>
+
+<script type="text/javascript">
+
+
+
+
+           var math = Math.floor(Math.random() * 10 +1);
+                  
+                         var guess = 1;
+
+      document.getElementById('submitguess').onclick =function(){
+                   var a = document.getElementById("guessField").value;
+
+             if(math ==a){
+                     document.getElementById("demo").innerHTML = "guess it for " + guess +  "times";
+             }       
+
+             else if(a > math){
+             	guess++;
+             	document.getElementById("demo").innerHTML = "poqr";
+             }
+
+             else{
+             	 guess++;
+             	 document.getElementById("demo").innerHTML = "greater";
+             }
+
+
+     }
+
+
+     
+document.write("<br>");
+
+function uppercase(str)
+{
+  var array1 = str.split('...');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(':');
+}
+document.write(uppercase("the quick brown fox"+"<br>"));
+
+
+
+
+
+document.write(Math.pow(2,4)+"<br>");
+var a = " this is end page oll";
+document.write(a.endsWith('oll'));
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
